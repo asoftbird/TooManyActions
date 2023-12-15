@@ -55,6 +55,7 @@ classes = (
     ui.ColorMenu,
     operators.NODE_OT_remove_node_color,
     operators.NODE_OT_set_node_color,
+    operators.NODE_OT_select_grouped_color,
     operators.NODE_OT_add_comment_reroute
 )
 
