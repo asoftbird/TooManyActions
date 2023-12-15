@@ -4,9 +4,9 @@ from . import configfile
 
 colors = configfile["node_color_presets"]
 
-class TooManyColors(bpy.types.Menu):
-    bl_label = "TooManyColors"
-    bl_idname = "WINDOW_MT_TooManyColors"
+class TooManyActions(bpy.types.Menu):
+    bl_label = "TooManyActions"
+    bl_idname = "WINDOW_MT_TooManyActions"
 
     def draw(self, context):
         layout = self.layout
@@ -28,4 +28,4 @@ class ColorMenu(bpy.types.Menu):
 
 def draw_item(self, context):
     layout = self.layout
-    layout.menu(TooManyColors.bl_idname)
+    layout.menu(TooManyActions.bl_idname)

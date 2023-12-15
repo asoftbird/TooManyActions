@@ -19,7 +19,7 @@
 # <pep8 compliant>
 
 bl_info = {
-    "name": "TooManyColors",
+    "name": "TooManyActions",
     "description": "Adds a quick menu for Node Editors to quickly set color of nodes. Supports multiple selected nodes. Default hotkey Ctrl+Q.",
     "author": "asoftbird (https://titmou.se/)",
     "version": (1, 1, 0),
@@ -51,7 +51,7 @@ else:
     )
 
 classes = (
-    ui.TooManyColors,
+    ui.TooManyActions,
     ui.ColorMenu,
     operators.NODE_OT_remove_node_color,
     operators.NODE_OT_set_node_color,
@@ -70,7 +70,7 @@ def register():
     if kc:
         km = wm.keyconfigs.addon.keymaps.new(name="Window", space_type='EMPTY')
         kmi = km.keymap_items.new("wm.call_menu", 'Q', 'PRESS', ctrl=True, shift=False)
-        kmi.properties.name = ui.TooManyColors.bl_idname
+        kmi.properties.name = ui.TooManyActions.bl_idname
         addon_keymaps.append((km, kmi))
 
 
