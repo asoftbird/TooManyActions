@@ -22,7 +22,7 @@ bl_info = {
     "name": "TooManyColors",
     "description": "Adds a quick menu for Node Editors to quickly set color of nodes. Supports multiple selected nodes. Default hotkey Ctrl+Q.",
     "author": "asoftbird (https://titmou.se/)",
-    "version": (1, 0, 0),
+    "version": (1, 1, 0),
     "blender": (3, 3, 0),
     "category": "Interface",
     }
@@ -54,7 +54,8 @@ classes = (
     ui.TooManyColors,
     ui.ColorMenu,
     operators.NODE_OT_remove_node_color,
-    operators.NODE_OT_set_node_color
+    operators.NODE_OT_set_node_color,
+    operators.NODE_OT_add_comment_reroute
 )
 
 addon_keymaps = []

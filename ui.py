@@ -14,6 +14,7 @@ class TooManyColors(bpy.types.Menu):
         # Node color presets
         layout.menu(ColorMenu.bl_idname)
         layout.operator("node.remove_node_color", text="Remove node color")
+        layout.operator("node.add_comment_reroute", text="Add comment")
 
 class ColorMenu(bpy.types.Menu):
     bl_label = "Set node color"
