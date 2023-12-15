@@ -46,3 +46,15 @@ class NODE_OT_add_comment_reroute(bpy.types.Operator):
         bpy.ops.wm.call_panel(name="TOPBAR_PT_name", keep_open=False)
 
         return {'FINISHED'}
+
+class NODE_OT_select_grouped_color(bpy.types.Operator):
+    bl_label = "Select nodes with similar color"
+    bl_idname = "node.select_grouped_color"
+
+    @classmethod
+    def poll(cls, context):
+        return True if hasattr(context, 'selected_nodes') else False
+
+    def execute(self, context):
+        bpy.ops.node.select_grouped(extend=False, type='COLOR')
+        return {'FINISHED'}
