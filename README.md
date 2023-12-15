@@ -4,6 +4,7 @@ Blender addon (3.3.0+) that adds a shortcut for quick node editor actions.
 Current functionality:
 - Set color of selected nodes to one of the predefined colors.
 - Remove color from all selected nodes.
+- Select similar nodes by color
 - Add Comment: adds a reroute at cursor position and immediately opens the Rename modal.
 
 The node color functions are intended to be used together with Blender's "Select nodes by color" feature, to easily select nodes marked by colors.
