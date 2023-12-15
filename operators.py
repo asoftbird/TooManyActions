@@ -32,3 +32,17 @@ class NODE_OT_remove_node_color(bpy.types.Operator):
         for node in context.selected_nodes:
             node.use_custom_color = False
         return {'FINISHED'}
+
+class NODE_OT_add_comment_reroute(bpy.types.Operator):
+    bl_label = "Add comment (reroute)"
+    bl_idname = "node.add_comment_reroute"
+
+    @classmethod
+    def poll(cls, context):
+        return True if hasattr(context, 'selected_nodes') else False
+
+    def execute(self, context):
+        bpy.ops.node.add_node(type="NodeReroute", use_transform=True)
+        bpy.ops.wm.call_panel(name="TOPBAR_PT_name", keep_open=False)
+
+        return {'FINISHED'}
